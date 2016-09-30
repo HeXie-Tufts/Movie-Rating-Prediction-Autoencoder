@@ -73,11 +73,7 @@ def train_auto(data_size = "100k", nb_epoch = 10, test_p = 0.1, nb_hunits = 10, 
             prediction_M[i, :] = np.array(Ri_predicted)
         RMSE_list[j] = cal_RMSE(prediction_M, test_ratings)
 
-    print("done")
-    plt.figure(1)
-    plt.plot(list(range(nb_epoch)), RMSE_list, 'rs-')
-    plt.show()
-
+    print("training complete")
     return nb_epoch, RMSE_list
 
 
