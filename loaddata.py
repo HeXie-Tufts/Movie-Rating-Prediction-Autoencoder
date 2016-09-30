@@ -42,8 +42,6 @@ def get_data(size):
     ratings = np.array(ratings, dtype = np.float32)
     # permute the ratings array
     ratings = np.random.permutation(ratings)
-    # Adjust all ratings to zero mean
-    # ratings[:, 2] = ratings[:, 2] - 3
     print("Loading data done")
     return ratings
 
